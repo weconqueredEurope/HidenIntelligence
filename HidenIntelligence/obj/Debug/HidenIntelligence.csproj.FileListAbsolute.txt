@@ -154,11 +154,3 @@ E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\obj\Debug\Hi
 E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\obj\Debug\HidenIntelligence.csproj.CopyComplete
 E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\obj\Debug\HidenIntelligence.dll
 E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\obj\Debug\HidenIntelligence.pdb
-E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\bin\EntityFramework.dll
-E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\bin\EntityFramework.SqlServer.dll
-E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\bin\EntityFramework.xml
-E:\Hoc\KI 2 NAM 3\Thuc tap Nhom\HidenIntelligence\HidenIntelligence\bin\EntityFramework.SqlServer.xml
-C:\Users\Admin\source\repos\HidenIntelligence\HidenIntelligence\bin\EntityFramework.dll
-C:\Users\Admin\source\repos\HidenIntelligence\HidenIntelligence\bin\EntityFramework.SqlServer.dll
-C:\Users\Admin\source\repos\HidenIntelligence\HidenIntelligence\bin\EntityFramework.xml
-C:\Users\Admin\source\repos\HidenIntelligence\HidenIntelligence\bin\EntityFramework.SqlServer.xml

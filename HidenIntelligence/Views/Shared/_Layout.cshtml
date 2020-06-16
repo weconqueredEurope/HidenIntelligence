@@ -14,13 +14,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta charset="UTF-8" />
     <meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
     </script>
     <!-- //Meta tag Keywords -->
     <!-- Custom-Files -->
@@ -215,8 +215,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="row">
                         <!-- search -->
                         <div class="col-10 agileits_search">
-                            <form class="form-inline" action="#" method="get">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" required>
+                            <form class="form-inline" action="#" method="post">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
                                 <button class="btn my-2 my-sm-0" type="submit">Tìm kiếm </button>
                             </form>
                         </div>
@@ -247,10 +247,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="agileits-navi_search">
                     <form action="#" method="post">
-                        <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="" onchange="window.location.href=this.value;">
+                        <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
                             <option value="">Danh mục sản phẩm</option>
-                            @RenderSection("CateBox", required: false)
-
+                            <option value="Televisions">Televisions</option>
+                            <option value="Headphones">Headphones</option>
+                            <option value="Computers">Computers</option>
+                            <option value="Appliances">Appliances</option>
+                            <option value="Mobiles">Mobiles</option>
+                            <option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
+                            <option value="iPad & Tablets">iPad & Tablets</option>
+                            <option value="Cameras & Camcorders">Cameras & Camcorders</option>
+                            <option value="Home Audio & Theater">Home Audio & Theater</option>
                         </select>
                     </form>
                 </div>
@@ -266,8 +273,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
+                        <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Electronics
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="agile_inner_drop_nav_info p-4">
+                                    <h5 class="mb-3">Mobiles, Computers</h5>
+                                    <div class="row">
+                                        <div class="col-sm-6 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li>
+                                                    <a href="product.html">All Mobile Phones</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li>
+                                                    <a href="product.html">Laptops</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Appliances
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="agile_inner_drop_nav_info p-4">
+                                    <h5 class="mb-3">TV, Appliances, Electronics</h5>
+                                    <div class="row">
+                                        <div class="col-sm-6 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li>
+                                                    <a href="product2.html">Televisions</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li>
+                                                    <a href="product2.html">Musical Instruments</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
                             <a class="nav-link" href="/Home/AboutUs">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link" href="product.html">New Arrivals</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Home/Contact">Liên hệ</a>
@@ -352,7 +418,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div>
                         </form>
                         <!-- //newsletter -->
-                        
+                        <!-- social icons -->
+                        <!-- <div class="footer-grids  w3l-socialmk mt-3">
+                            <h3 class="text-white font-weight-bold mb-3">Follow Us on</h3>
+                            <div class="social">
+                                <ul>
+                                    <li>
+                                        <a class="icon fb" href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon tw" href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon gp" href="#">
+                                            <i class="fab fa-google-plus-g"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <!-- //social icons -->
                     </div>
                 </div>
                 <!-- //quick links -->
@@ -415,85 +504,84 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //copyright -->
     <!-- js-files -->
     <!-- jquery -->
-    <script src="~/Content/assets/js/jquery-2.2.3.min.js"></script>
+    <script src="/Content/assets/js/jquery-2.2.3.min.js"></script>
     <!-- //jquery -->
     <!-- nav smooth scroll -->
     <script>
-        $(document).ready(function () {
-            $(".dropdown").hover(
-                function () {
-                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                    $(this).toggleClass('open');
-                },
-                function () {
-                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                    $(this).toggleClass('open');
-                }
-            );
-        });
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
     </script>
     <!-- //nav smooth scroll -->
     <!-- popup modal (for location)-->
     <script src="/Content/assets/js/jquery.magnific-popup.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-                fixedContentPos: false,
-                fixedBgPos: true,
-                overflowY: 'auto',
-                closeBtnInside: true,
-                preloader: false,
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
 
-        });
+		});
     </script>
     <!-- //popup modal (for location)-->
     <!-- cart-js -->
     <script src="/Content/assets/js/minicart.js"></script>
     <script>
-        paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-        paypals.minicarts.cart.on('checkout', function (evt) {
-            var items = this.items(),
-                len = items.length,
-                total = 0,
-                i;
+		paypals.minicarts.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
 
-            // Count the number of each item in the cart
-            for (i = 0; i < len; i++) {
-                total += items[i].get('quantity');
-            }
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
 
-            if (total < 1) {
-                alert('The minimum order quantity is 1. Please add more to your shopping cart before checking out');
-                evt.preventDefault();
-            }
-        });
+			if (total < 1) {
+				alert('The minimum order quantity is 1. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
     </script>
     <!-- //cart-js -->
     <!-- password-script -->
     <script>
-        window.onload = function () {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
 
-        function validatePassword() {
-            var pass2 = document.getElementById("password2").value;
-            var pass1 = document.getElementById("password1").value;
-            if (pass1 != pass2)
-                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-            else
-                document.getElementById("password2").setCustomValidity('');
-            //empty string means no validation error
-        }
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
     </script>
     <!-- //password-script -->
-    
     <!-- scroll seller -->
     <script src="/Content/assets/js/scroll.js"></script>
     <!-- //scroll seller -->
@@ -504,33 +592,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="/Content/assets/js/move-top.js"></script>
     <script src="/Content/assets/js/easing.js"></script>
     <script>
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
 
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-        });
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
     </script>
     <!-- //end-smooth-scrolling -->
     <!-- smooth-scrolling-of-move-up -->
     <script>
-        $(document).ready(function () {
-            /*
-            var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-            };
-            */
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
 
-        });
+		});
     </script>
     <!-- //smooth-scrolling-of-move-up -->
     <!-- for bootstrap working -->
