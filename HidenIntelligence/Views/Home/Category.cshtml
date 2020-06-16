@@ -1,0 +1,10 @@
+﻿@using HidenIntelligence.Areas.Admin.Models
+
+@model List<TheLoaiSP>
+
+@foreach (TheLoaiSP item in Model)
+{
+    <option value="/@item.VietTat/Index">@item.TenLoai</option>
+}
+
+

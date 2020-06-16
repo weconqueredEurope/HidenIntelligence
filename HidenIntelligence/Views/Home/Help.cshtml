@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section CateBox{
+    @Html.Action("Category")
+}
+
 <!-- banner-2 -->
 <div class="page-head_agile_info_w3l">
 
@@ -37,11 +41,11 @@
         <div class="wthree-help mb-sm-5 mb-4">
             <div class="agile-left-help">
                 @*<h3 class="w3-head">How Can We help you</h3>
-                <form action="#" method="get">
-                    <textarea placeholder="Your Query" name="Message" required=""></textarea>
-                    <input type="submit" value="Submit">
-                </form>
-                <h5 class="my-sm-4 my-3">OR</h5>*@
+                    <form action="#" method="get">
+                        <textarea placeholder="Your Query" name="Message" required=""></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <h5 class="my-sm-4 my-3">OR</h5>*@
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
