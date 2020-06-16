@@ -1,2 +1,2 @@
 # HidenIntelligence
- TTNhom2020
+Applied template vào mô hình MVC
