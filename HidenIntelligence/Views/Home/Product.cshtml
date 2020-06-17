@@ -29,19 +29,19 @@
                 <div class="grid images_3_of_2">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="/Content/assets/images/si1.jpg">
+                            <li data-thumb="/Content/assets/images/@Model.HinhAnh1">
                                 <div class="thumb-image">
-                                    <img src="/Content/assets/images/si1.jpg" data-imagezoom="true" class="img-fluid" alt="">
+                                    <img src="/Content/assets/images/@Model.HinhAnh1" data-imagezoom="true" class="img-fluid" alt="">
                                 </div>
                             </li>
-                            <li data-thumb="/Content/assets/images/si2.jpg">
+                            <li data-thumb="/Content/assets/images/@Model.HinhAnh2">
                                 <div class="thumb-image">
-                                    <img src="/Content/assets/images/si2.jpg" data-imagezoom="true" class="img-fluid" alt="">
+                                    <img src="/Content/assets/images/@Model.HinhAnh2" data-imagezoom="true" class="img-fluid" alt="">
                                 </div>
                             </li>
-                            <li data-thumb="/Content/assets/images/si3.jpg">
+                            <li data-thumb="/Content/assets/images/@Model.HinhAnh3">
                                 <div class="thumb-image">
-                                    <img src="/Content/assets/images/si3.jpg" data-imagezoom="true" class="img-fluid" alt="">
+                                    <img src="/Content/assets/images/@Model.HinhAnh3" data-imagezoom="true" class="img-fluid" alt="">
                                 </div>
                             </li>
                         </ul>
@@ -51,10 +51,10 @@
             </div>
 
             <div class="col-lg-7 single-right-left simpleCart_shelfItem">
-                <h3 class="mb-3">Tên Sản phẩm</h3>
+                <h3 class="mb-3">@Model.TenSP</h3>
                 <p class="mb-3">
-                    <span class="item_price">Giá</span>
-                    <del class="mx-2 font-weight-light">Giá gốc</del>
+                    <span class="item_price">@Model.DonGia VNĐ</span><br />
+                    @*<del class="mx-2 font-weight-light">Giá gốc</del>*@
                     <label>Vận chuyển</label>
                 </p>
                 <div class="single-infoagile">
@@ -74,20 +74,9 @@
                     </p>
                     <ul>
                         <li class="mb-1">
-                            Thông số kỹ thuật
+                            @Html.Raw(@Model.MoTa)
                         </li>
-                        <li class="mb-1">
-                            5.5 inch Full HD Display
-                        </li>
-                        <li class="mb-1">
-                            13MP Rear Camera | 8MP Front Camera
-                        </li>
-                        <li class="mb-1">
-                            3300 mAh Battery
-                        </li>
-                        <li class="mb-1">
-                            Exynos 7870 Octa Core 1.6GHz Processor
-                        </li>
+                        
                     </ul>
                     <p class="my-sm-4 my-3">
                         <i class="fas fa-retweet mr-3"></i>Chuyển khoản qua Credit/ Debit/ ATM card
@@ -100,10 +89,10 @@
                                 <input type="hidden" name="cmd" value="_cart" />
                                 <input type="hidden" name="add" value="1" />
                                 <input type="hidden" name="business" value=" " />
-                                <input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
-                                <input type="hidden" name="amount" value="200.00" />
-                                <input type="hidden" name="discount_amount" value="1.00" />
-                                <input type="hidden" name="currency_code" value="USD" />
+                                <input type="hidden" name="item_name" value="@Model.TenSP" />
+                                <input type="hidden" name="amount" value="@Model.DonGia" />
+                                <input type="hidden" name="discount_amount" value="" />
+                                <input type="hidden" name="currency_code" value="VND" />
                                 <input type="hidden" name="return" value=" " />
                                 <input type="hidden" name="cancel_return" value=" " />
                                 <input type="submit" name="submit" value="Thêm vào giỏ" class="button" />
@@ -120,7 +109,7 @@
 <script src="~/Content/assets/js/imagezoom.js"></script>
 <!-- //imagezoom -->
 <!-- flexslider -->
-<link rel="stylesheet" href="~/Content/assets/css/flexslider.css" type="text/css" media="screen" />
+@*<link rel="stylesheet" href="~/Content/assets/css/flexslider.css" type="text/css" media="screen" />*@
 
 <script src="~/Content/assets/js/jquery.flexslider.js"></script>
 <script>
