@@ -74,8 +74,9 @@ namespace HidenIntelligence
             {
                 for (int i = 0; i < masp.Count(); i++)
                 {
-                    var tmp = masp[i];
-                    var product = context.SanPhams.Where(x => x.MaSP == tmp).FirstOrDefault();
+                    //var tmp = masp[i];
+                    //var product = context.SanPhams.Where(x => x.MaSP == tmp).FirstOrDefault();
+                    var product = context.SanPhams.Find(masp[i]);
                     cart.UpdateItem(product, qty[i]);
                 }
 
@@ -204,6 +205,18 @@ namespace HidenIntelligence
             {
                 return View();
             }
+        }
+
+        public ActionResult thank()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult xacnhan(KhachHang model)
+        {
+            context.KhachHangs.Add(model);
+            context.SaveChanges();
+            return View("thank");
         }
     }
 }

@@ -2417,6 +2417,7 @@
     <Content Include="Views\Home\Checkout.cshtml" />
     <Content Include="Views\Home\payment.cshtml" />
     <Content Include="Views\Cart\Index1.cshtml" />
+    <Content Include="Views\Cart\thank.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,8 +3,9 @@
     "",
     "\\HidenIntelligence",
     "\\HidenIntelligence\\Views",
+    "\\HidenIntelligence\\Views\\Cart",
     "\\HidenIntelligence\\Views\\Home"
   ],
-  "SelectedNode": "\\HidenIntelligence\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\HidenIntelligence\\Views\\Cart\\thank.cshtml",
   "PreviewInSolutionExplorer": false
 }
