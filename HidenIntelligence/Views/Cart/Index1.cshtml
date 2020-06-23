@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using HidenIntelligence.Areas.Admin.Models
+
+<title>Giỏ Hàng</title>
+<div id="outerafterheader">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns" id="afterheader">
+                <h1 class="pagetitle">Giỏ hàng của bạn</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <form method="post" action="~/Cart/updatecart">
+        <div id="outermain">
+            <div id="maincontainer">
+                <div class="container">
+                    <div class="row">
+                        <section id="maincontent">
+                            <section id="content" class="twelve columns">
+                                <div id="ts-portfolio">
+                                    <div class="text-right">
+                                        <p class="social">
+                                            <a href="~/home/Login">
+                                                <img src="/Content/User/Content/img-comment/logout-icon.png" alt="facebook" />Đăng Xuất
+                                            </a>
+                                        </p>
+                                        <div>
+                                            <a href="~/home/index">Quay lại shopping</a>
+                                            <button type="submit">Cập nhật giỏ hàng</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <table style="width: 100%">
+                                        <thead>
+                                        <th>
+                                            Ảnh sản phẩm
+                                        </th>
+                                        <th>
+                                            Tên sản phẩm                                     </th>
+                                        <th>
+                                            Giá
+                                        </th>
+                                        <th>
+                                            Số lượng 
+                                        </th>
+                                        <th>
+                                            Thành tiền
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+                                        </thead>
+
+                                        <body>
+                                            @{ int i = 0;}
+                                            @{ double? sum = 0;}
+                                            @*   @{ TimeSpan songay;}
+                                                @{songay = @ViewBag.ngay2 - @ViewBag.ngay1;}*@
+                                            @foreach (CartItem it in Model.Lines)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                       
+                                                            <img height="100px" width="100px" alt="imagesanpham" src="~/Content/assets/images/@it.Sanpham.HinhAnh1">
+                                                       
+                                                    </td>
+                                                    <td>
+                                                        @it.Sanpham.TenSP
+
+                                                    </td>
+                                                    <td class="text-center">@it.Sanpham.DonGia.GetValueOrDefault().ToString("N0") VNĐ </td>
+                                                    <td class="qty">
+
+                                                        <input type="hidden" name="maphong[@i]" value="@it.Sanpham.MaSP" />
+                                                        <input type="text" name="qty[@i]" class="cart-input" value="@it.Quantity" />
+                                                    </td>
+                                                    <td class="subtotal">@((it.Quantity * it.Sanpham.DonGia.GetValueOrDefault(0)).ToString("N0"))   VNĐ</td>
+
+                                                    <td class="text-center"><a class="btn-remove" href="/Cart/RemoveLine/@it.Sanpham.MaSP"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                                </tr>
+                                                sum += it.Quantity * it.Sanpham.DonGia;
+                                                i += 1;
+                                            }
+                                        </body>
+                                    </table>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4">
+                                            <a href="~/home/index"><h2>Xác nhận</h2></a>
+                                        </div>
+                                        <div class="col-md-4"> <h2 style="text-align: right">Tổng tiền: @sum VNĐ</h2> </div>
+                                    </div>
+                                    @*<div class="clear"></div>
+                                        <h2 style="text-align: right">Tổng tiền: @sum VNĐ</h2>*@
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <style>
+        th {
+            height: 100px;
+            line-height: 100px;
+            white-space: nowrap;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        #footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</div>

@@ -56,13 +56,13 @@ namespace HidenIntelligence.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Product(int id)
         {
             var model = db.SanPhams.Find(id);
             return View(model);
         }
-        
+
         //Category
         [ChildActionOnly]
         public ActionResult Category()
@@ -70,5 +70,15 @@ namespace HidenIntelligence.Controllers
             var model = db.TheLoaiSPs.Where(x => x.MaLoai >= 100).ToList();
             return PartialView(model);
         }
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
+        public ActionResult payment()
+        {
+            return View();
+        }
+
     }
 }

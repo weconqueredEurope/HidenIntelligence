@@ -139,6 +139,7 @@
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaiSPsController.cs" />
     <Compile Include="Areas\Admin\Models\BinhLuan.cs" />
+    <Compile Include="Areas\Admin\Models\Cart.cs" />
     <Compile Include="Areas\Admin\Models\ChiTietDonHang.cs" />
     <Compile Include="Areas\Admin\Models\DonHang.cs" />
     <Compile Include="Areas\Admin\Models\DonNhapHang.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Areas\Admin\Models\NhaCungCap.cs" />
     <Compile Include="Areas\Admin\Models\SanPham.cs" />
     <Compile Include="Areas\Admin\Models\TheLoaiSP.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CBController.cs" />
     <Compile Include="Controllers\CSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2412,6 +2414,9 @@
     <Content Include="Views\NBA\Index.cshtml" />
     <Content Include="Views\PK\Index.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
+    <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Home\payment.cshtml" />
+    <Content Include="Views\Cart\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
