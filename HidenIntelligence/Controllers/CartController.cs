@@ -214,7 +214,13 @@ namespace HidenIntelligence
         [HttpPost]
         public ActionResult xacnhan(KhachHang model)
         {
+            Random rnd = new Random();
+            int num = rnd.Next(41, 1000);
             context.KhachHangs.Add(model);
+            if (context.KhachHangs.Find(num) !=null)
+            {
+                num = rnd.Next(41, 1000);
+            }
             context.SaveChanges();
             return View("thank");
         }
